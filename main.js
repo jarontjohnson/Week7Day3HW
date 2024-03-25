@@ -1,5 +1,14 @@
 console.log("Test");
 
+const search = document.querySelector('search')
+console.log(search)
+
+search.addEventListener('click', (event) => {
+  event.preventDefault()
+  pokename = event.target[0].value
+  console.log(pokename)
+  pokemonData(pokename)
+})
 const pokemonData = async (pokename) => {
     try{
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokename}`)
