@@ -1,9 +1,9 @@
 console.log("Test");
 
-const search = document.querySelector('search')
-console.log(search)
+const my_form = document.querySelector('form')
+console.log(my_form)
 
-search.addEventListener('click', (event) => {
+my_form.addEventListener('click', (event) => {
   event.preventDefault()
   pokename = event.target[0].value
   console.log(pokename)
